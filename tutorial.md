@@ -22,7 +22,11 @@ We will leverage LLMs through AWS's Bedrock service which provides a single unif
 
 The purpose of this tutorial is to help you get up and running with your first AI Agent.
 
-## Overview
+## What we're going to build
+
+![Demo](/demo.gif "Demo")
+
+### High-level flow
 
 The diagram below illustrates the high-level flow of a user request through an AI Agent built with Strands, leveraging AWS Bedrock to access a large language model (LLM).
 
