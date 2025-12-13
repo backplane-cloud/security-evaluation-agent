@@ -20,15 +20,26 @@ Let’s get started!
 
 ## Setting up AWS
 
-The first thing we need to do is ensure with an an identity that can authenticate with AWS Bedrock to gain access to the LLM.
+The first thing we need to do is ensure that we have an identity that can authenticate with AWS Bedrock to gain access to the LLM.
 
-### Step 1: Create Identity
+### Step 1: Create IAM User
 
-Sign into AWS management console, navigate to IAM User > Create user: `bedrock-api`
+This is so we can generate a Bedrock API Key required to access Bedrock's LLM that the Agent will use.
+
+1. Sign into AWS management console
+2. Navigate to IAM User
+3. Create user: `bedrock-api`
+4. Next, Attach policies directly
+5. Select policy `AmazonBedrockFullAccess`
+6. Create User
+
+> Securty Note: This is for demo purposes only. For Production deployment you'll want to use least privilege and use a custom policy with the action: `bedrock:InvokeModelWithResponseStream`
 
 ### Step 2: Generate Bedrock API Key
 
-Go to the **User > Securty credentials** tab and scroll to the section **API keys for Amazon Bedrock** and click **Generate API Key**
+1. Go to the **User > Securty credentials** tab
+2. Scroll down to the section **API keys for Amazon Bedrock**
+3. Click **Generate API Key**
 
 ### Step3: Add API Key to environment
 
@@ -38,29 +49,21 @@ The API Key then needs to be exported in your terminal window as an environment 
 export AWS_BEARER_TOKEN_BEDROCK=<INSERT BEDROCK API KEY>
 ```
 
-#### Add IAM Policy
-
-The IAM User `bedrock-api` will require authorization to access Bedrock.
-Attach the AWS managed policy to the IAM User: `AmazonBedrockFullAccess`
-
-Click on the User > Permissions > Add Permissions and select the AmazonBedrockFullAccess
-
-> Securty Note: This is for demo purposes only. For Production deploy you'll want to use least privilege and use a custom policy with the action: `bedrock:InvokeModelWithResponseStream`
-
-#### Summary
-
-We should have the following in place:
-
-| Artifact        | Description                                                             |
-| --------------- | ----------------------------------------------------------------------- |
-| bedrock-api     | This is the security principal (Identity/IAM User) used for AuthN/AuthZ |
-| Bedrock API Key | This is required to Authenticate with AWS Bedrock to access the LLM     |
+AWS Setup is now complete. Next we will setup the environment in your IDE. For this tutorial I will be assuming VSCode, Mac OS.
 
 ## Environment Setup
 
-> Note: The instructions for this tutorial are using Mac OS
+### Step 1: Initialise Project Directory
 
-### Step 1: Install Python
+Let's create a project folder called `security-agent` and in here we will create our Agent file: `security-agent.py`
+
+```bash
+# Create folder for your project
+mkdir security-agent
+cd security-agent
+```
+
+### Step 2: Install Python
 
 Since most AI Agents are coded in Python and the support and documentation is Python-orientated, we will also build our first Agent in Python.
 
@@ -77,7 +80,7 @@ Verifying installation by running: `python3 --version`
 Python 3.14.0
 ```
 
-### Step 2: Create and activate a virtual environment
+### Step 3: Create and activate a virtual environment
 
 It’s recommended to use a Python virtual environment to keep dependencies isolated.
 
@@ -89,7 +92,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-### Step 3: Install the Strands packages
+### Step 4: Install the Strands packages
 
 This installs the Strands Python package and makes its modules (like strands.Agent) available for use in your project.
 
@@ -107,16 +110,6 @@ Verify installation:
 
 ```bash
 pip show strands-agents
-```
-
-### Step 4: Initialise Project Directory
-
-Let's create a project folder called `security-agent` and in here we will create our Agent file: `security-agent.py`
-
-```bash
-# Create folder for your project
-mkdir security-agent
-cd security-agent
 ```
 
 ## Create Agent
@@ -434,4 +427,4 @@ Security Framework References:
 - NIST CSF: DE.CM-8 (Malicious Code Detection), ID.AM-4 (Data/Information Cataloging)%
 ```
 
-Congratulations, you have create your first AI Agent using AWS and Strands.
+Congratulations, you have created your first AI Agent using AWS and Strands.
