@@ -1,24 +1,47 @@
 # Tutorial: Building an Enterprise AI Agent using AWS Bedrock and Strands
 
-## Creating an AWS Security Architect AI Agent
+## Table of Contents
 
-In this tutorial, you will build an **AI Agent** using **Strands** and **AWS Bedrock**.
+1. [Introduction](#introduction)
+2. [Conceptual Overview](#overview)
+3. [Prerequisites](#prerequisites)
+4. [Setup Environment](#setup-environment)
+5. [Create Agent](#create-agent)
+6. [Run Agent](#run-agent)
+7. [What's Next ?](#whats-next)
 
-The AI Agent we will create will serve as a **Security Evaluator** for cloud services. Its primary tasks will be to:
+# Introduction
 
-- Retrieve **AWS Security Best Practices** for a given cloud service (e.g., Amazon S3) and present them as actionable **Security Controls** with implementation guidance.
-- Map these controls to the relevant **Cybersecurity Framework references** (e.g., NIST CSF).
+Consider this tutorial the 'Hello, World' AI Agent. 🤖
 
-This tutorial provides a hands-on demonstration of:
+We'll build a simple AI Agent with Strands that accepts as input an AWS cloud services e.g. `S3` and returns the Security Best Practices including technical implementation guidance.
 
-- How to build an AI Agent using **Strands**.
-- How to integrate **Tools** and **LLMs** for actionable security insights.
+In addition, it will also retrieve relevant Security Controls from a Cyber Security Framework e.g. `NIST CSF`
 
-We will leverage **AWS Bedrock** to access large language models (LLMs). In a follow-up tutorial, we will demonstrate how to host the Agent in **Bedrock Agent Core**.
+We will leverage LLMs through AWS's Bedrock service which provides a single unified API endpoint to access foundation models. In this example, Anthropic's Claude will be used.
 
-Let’s get started!
+The purpose of this tutorial is to help you get up and running with your first AI Agent.
 
-## Setting up AWS
+## Overview
+
+The diagram below illustrates the high-level flow of a user request through an AI Agent built with Strands, leveraging AWS Bedrock to access a large language model (LLM).
+
+```mermaid
+flowchart LR
+    User[User / Engineer] -->|Prompt| Agent[AI Agent<br/>Strands]
+
+    Agent -->|Invoke Model| Bedrock[AWS Bedrock]
+
+    Bedrock -->|Inference Request| LLM[Foundation Model<br/>LLM]
+
+    LLM -->|Generated Response| Bedrock
+
+    Bedrock -->|Model Output| Agent
+
+    Agent -->|Structured Answer| User
+```
+
+# Prerequisites
 
 The first thing we need to do is ensure that we have an identity that can authenticate with AWS Bedrock to gain access to the LLM.
 
@@ -51,7 +74,7 @@ export AWS_BEARER_TOKEN_BEDROCK=<INSERT BEDROCK API KEY>
 
 AWS Setup is now complete. Next we will setup the environment in your IDE. For this tutorial I will be assuming VSCode, Mac OS.
 
-## Environment Setup
+## Setup Environment
 
 ### Step 1: Initialise Project Directory
 
@@ -112,16 +135,16 @@ Verify installation:
 pip show strands-agents
 ```
 
-## Create Agent
+# Create Agent
 
-### Step 1: Create Agent
+### Step 1: Create Agent file
 
 ```bash
 # Create Agent file
 touch security-agent.py
 ```
 
-### Step 2: Create Agent
+### Step 2: Import Strands
 
 ```python
 # Import Strands Packages
@@ -197,7 +220,7 @@ agent(user_input)
 
 ```
 
-### Step 3: Run the Agent
+# Run Agent
 
 Simply type:
 
@@ -428,3 +451,19 @@ Security Framework References:
 ```
 
 Congratulations, you have created your first AI Agent using AWS and Strands.
+
+# What's next ?
+
+Hopefully this tutorial has show you how simple it is to build an AI Agent.
+
+The next step will be to create a generalised orchestrator agent that levearages Model Context Protocol (MCP) to access the tools made available from more specialised agents.
+
+For example:
+
+| Agent                    | Description                                                                                       |
+| ------------------------ | ------------------------------------------------------------------------------------------------- |
+| Cloud Security Architect | Takes an AWS service and retrieves Security Best Practices with technical implementation guidance |
+| Cloud Architect          | take an AWS service and output a reference architecture in Terraform                              |
+| Cloud Engineer           | takes the Terraform to produce Cloud Policies to enforce Security Controls                        |
+| Regulatory Compliance    | checks for regulatory compliance e.g. `SOC2`, `GDPR` etc.                                         |
+| Cyber Securty Framework  | Checks for corresponding Security Controls from Framework to match Security Controls for service  |
