@@ -456,6 +456,10 @@ Security Framework References:
 
 Congratulations, you have created your first AI Agent using AWS and Strands.
 
+# Hosting in Bedrock Agent Core
+
+Now we have our AI Agent running locally, the next step is to have it hosted so it can be accessible from your client application.
+
 # What's next ?
 
 Hopefully this tutorial has show you how simple it is to build an AI Agent.

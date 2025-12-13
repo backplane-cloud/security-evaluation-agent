@@ -1,6 +1,21 @@
 from strands import Agent
 from strands_tools import http_request
 
+from strands.models import BedrockModel
+
+
+# Choose a LLM Model for the Agent
+# model = BedrockModel(
+#     model_id="amazon.nova-lite-v1:0",
+#     streaming=True
+# )
+
+model = BedrockModel(
+    model_id="anthropic.claude-3-haiku-20240307-v1:0",
+    streaming=True
+)
+
+
 # Agent Persona
 SYSTEM_PROMPT = '''You are a principal AWS Cloud Security Architect.
 
@@ -56,7 +71,7 @@ Security Controls:
 If the service name is ambiguous or deprecated, ask for clarification before proceeding.
 '''
 
-agent = Agent(system_prompt=SYSTEM_PROMPT, tools=[http_request])
+agent = Agent(system_prompt=SYSTEM_PROMPT, model=model, tools=[http_request])
 
 user_input = input("What AWS Service do you require a security evaluation for ? ")
 
