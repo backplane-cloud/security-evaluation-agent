@@ -229,6 +229,7 @@ Tool #3: http_request
 
 Agents Response (in Markdown):
 
+```
 ## AWS Service: Amazon S3
 
 ### Security Controls:
@@ -431,5 +432,6 @@ Implementation Guidance:
 Security Framework References:
 
 - NIST CSF: DE.CM-8 (Malicious Code Detection), ID.AM-4 (Data/Information Cataloging)%
+```
 
 Congratulations, you have create your first AI Agent using AWS and Strands.
