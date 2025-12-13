@@ -72,7 +72,11 @@ The API Key then needs to be exported in your terminal window as an environment 
 export AWS_BEARER_TOKEN_BEDROCK=<INSERT BEDROCK API KEY>
 ```
 
-AWS Setup is now complete. Next we will setup the environment in your IDE. For this tutorial I will be assuming VSCode, Mac OS.
+> AWS SDK note
+>
+> - This project uses the AWS SDK for Python (boto3) indirectly through the Strands framework.
+> - You do not need to install the AWS SDK separately — it is installed automatically as a dependency of Strands.
+> - Authentication is handled using standard AWS credential resolution. In this tutorial we use a Bedrock API key exported as an environment variable.
 
 ## Setup Environment
 
