@@ -1,21 +1,24 @@
-# Tutorial - How to build Enterprise AI Agent using AWS Bedrock and Strands
+# Tutorial: Building an Enterprise AI Agent using AWS Bedrock and Strands
 
 ## Creating an AWS Security Architect AI Agent
 
-In this tutorial you will create an AI Agent using Strands and AWS Bedrock.
+In this tutorial, you will build an **AI Agent** using **Strands** and **AWS Bedrock**.
 
-The AI Agent we will be building will act as a Security Evaluator of Cloud Services to:
+The AI Agent we will create will serve as a **Security Evaluator** for cloud services. Its primary tasks will be to:
 
-- retreive Security Best Practices for a Cloud Service e.g. AWS S3 and return these as suggested Security Controls with implementation guidance
-- Retrieve the corresponding Security Controls references from a Cyber Security Framework e.g. NISF CSF
+- Retrieve **AWS Security Best Practices** for a given cloud service (e.g., Amazon S3) and present them as actionable **Security Controls** with implementation guidance.
+- Map these controls to the relevant **Cybersecurity Framework references** (e.g., NIST CSF).
 
-This is a basic demo of how to build an AI Agent using Strands, how to use Tools and LLMs.
+This tutorial provides a hands-on demonstration of:
 
-We will use AWS Bedrock to provide access to LLM. In a later tutorial I will show you how to host the Agent in Bedrock Agent Core.
+- How to build an AI Agent using **Strands**.
+- How to integrate **Tools** and **LLMs** for actionable security insights.
 
-Let's get started!
+We will leverage **AWS Bedrock** to access large language models (LLMs). In a follow-up tutorial, we will demonstrate how to host the Agent in **Bedrock Agent Core**.
 
-## Setup AWS
+Let’s get started!
+
+## Setting up AWS
 
 The first thing we need to do is ensure with an an identity that can authenticate with AWS Bedrock to gain access to the LLM.
 
