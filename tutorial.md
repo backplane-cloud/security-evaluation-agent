@@ -14,7 +14,7 @@
 
 Consider this tutorial the 'Hello, World' AI Agent. 🤖
 
-We'll build a simple AI Agent with Strands that accepts as input an AWS cloud services e.g. `S3` and returns the Security Best Practices including technical implementation guidance.
+We'll build a simple AI Agent with Strands that accepts as input an AWS cloud service e.g. `S3` and returns the Security Best Practices including technical implementation guidance.
 
 In addition, it will also retrieve relevant Security Controls from a Cyber Security Framework e.g. `NIST CSF`
 
