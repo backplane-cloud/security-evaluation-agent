@@ -466,9 +466,9 @@ Now we have our AI Agent running locally, the next step is to have it hosted so 
 
 # What's next ?
 
-Hopefully this tutorial has show you how simple it is to build an AI Agent.
+Hopefully this tutorial has shown you how simple it is to build an AI Agent.
 
-The next step will be to create a generalised orchestrator agent that levearages Model Context Protocol (MCP) to access the tools made available from more specialised agents.
+The next step will be to create a generalised orchestrator agent that leverages Model Context Protocol (MCP) to access the tools made available from more specialised agents.
 
 For example:
 
