@@ -3,7 +3,7 @@
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Conceptual Overview](#overview)
+2. [Overview](#overview)
 3. [Prerequisites](#prerequisites)
 4. [Setup Environment](#setup-environment)
 5. [Create Agent](#create-agent)
@@ -26,7 +26,7 @@ The purpose of this tutorial is to help you get up and running with your first A
 
 ![Demo](/demo.gif "Demo")
 
-### High-level flow
+## Overview
 
 The diagram below illustrates the high-level flow of a user request through an AI Agent built with Strands, leveraging AWS Bedrock to access a large language model (LLM).
 
