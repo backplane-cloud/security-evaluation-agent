@@ -464,6 +464,8 @@ Congratulations, you have created your first AI Agent using AWS and Strands.
 
 Now we have our AI Agent running locally, the next step is to have it hosted so it can be accessible from your client application.
 
+Visit: [Bedrock AgentCore Runtime – Quickstart (Agentic AI with Python & Docker)](./agent-core-quickstart.md)
+
 # What's next ?
 
 Hopefully this tutorial has shown you how simple it is to build an AI Agent.
