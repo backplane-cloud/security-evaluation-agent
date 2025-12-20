@@ -62,14 +62,11 @@ flowchart LR
 
 ### Explanation
 - Your Agent runs inside Bedrock AgentCore
-AgentCore is the managed runtime (sessions, isolation, lifecycle)
+- AgentCore is the managed runtime (sessions, isolation, lifecycle)
 - Amazon Bedrock provides access to Foundation Models
 - Your agent does not host or manage the LLM — it calls Bedrock
 - AgentCore handles scaling, isolation, and execution
-- This diagram is especially useful for people coming from:
-- Lambda
-- ECS
-- Traditional microservices
+- This diagram is especially useful for people coming from Lambda, ECS and traditional microservices architectures
 
 ## Request -> Response flow
 
@@ -105,6 +102,24 @@ Before starting, ensure you have:
 * Python 3.10+
 * AWS credentials configured
 
+
+### Configure AWS credentials
+
+#### Generate Bedrock API Key
+
+1. Go to the **User > Securty credentials** tab
+2. Scroll down to the section **API keys for Amazon Bedrock**
+3. Click **Generate API Key**
+
+#### Add API Key to environment
+
+The API Key then needs to be exported in your terminal window as an environment variable.
+
+```bash
+export AWS_BEARER_TOKEN_BEDROCK=<INSERT BEDROCK API KEY>
+```
+
+<!-- 
 ### Configure AWS credentials
 
 ```bash
@@ -117,7 +132,7 @@ Or export credentials explicitly:
 export AWS_ACCESS_KEY_ID=xxxxxxxx
 export AWS_SECRET_ACCESS_KEY=xxxxxxxx
 export AWS_REGION=us-east-1
-```
+``` -->
 
 ---
 
