@@ -367,6 +367,10 @@ In this quickstart you have learned how to:
 * Build an AI Agent using Strands
 * Deploy the AI Agent to Bedrock Agent Core
 
+Below is a 5 min speed run video based on the AWS documentation this quickstart is based on:
+
+https://www.youtube.com/watch?v=VzEfi7prl5o
+
 
 
 
