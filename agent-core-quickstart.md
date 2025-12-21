@@ -27,7 +27,7 @@ Here is what we'll be doing:
 10. [Step 6: Launch the Agent in Bedrock AgentCore Runtime](#step-6-launch-the-agent-in-bedrock-agentcore-runtime)
 11. [Step 7: Test Agent](#step-7-test-the-agent)
 12. [Step 8: Clean Up Resources](#step-8-clean-up-resources)
-13. [Let's a wrap](#lets-a-wrap)
+13. [That's a wrap](#thats-a-wrap)
 
 
 ### Prerequisites
@@ -360,10 +360,12 @@ agentcore destroy
 
 This immediately invalidates all sessions and runtime access.
 
-## Let's a wrap
+## That's a wrap
 
-* How to build an AI Agent using Strands
-* How to deploy to Bedrock Agent Core
+In this quickstart you have learned how to:
+
+* Build an AI Agent using Strands
+* Deploy the AI Agent to Bedrock Agent Core
 
 
 ### Next Steps
