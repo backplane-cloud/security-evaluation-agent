@@ -25,7 +25,7 @@ Here is what we'll be doing:
 8. [Step 4: Run the Agent Locally](#step-4-run-the-agent-locally)
 9. [Step 5: Configure for Bedrock AgentCore Deployment](#step-5-configure-for-bedrock-agentcore-deployment)
 10. [Step 6: Launch the Agent in Bedrock AgentCore Runtime](#step-6-launch-the-agent-in-bedrock-agentcore-runtime)
-11. [Step 7: Invoke the Agent via CLI](#step-7-invoke-the-agent-via-cli)
+11. [Step 7: Test Agent](#step-7-test-the-agent)
 12. [Step 8: Clean Up Resources](#step-8-clean-up-resources)
 13. [Let's a wrap](#lets-a-wrap)
 
