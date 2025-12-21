@@ -155,7 +155,7 @@ agentcore --help
 
 ## Step 3: Create the Agent
 
-Let's create a simple AI Agent. to begin, create the `agent.py` and `requirements.txt` files:
+Create the `agent.py` and `requirements.txt` files:
 
 
 ```bash
@@ -221,7 +221,7 @@ Expected response:
 
 Stop the agent with **Ctrl + C**.
 
-Congratulations, you have successfully create an AI Agent that is able to accept a Request and query Bedrock LLM to return a Response from a LLM. 
+Congratulations, you have successfully created an AI Agent that is able to accept a Request, query the LLM via Bedrock.  
 
 Next, we will deploy and host this Agent on Bedrock Agent Core. 
 
@@ -367,7 +367,9 @@ In this quickstart you have learned how to:
 * Build an AI Agent using Strands
 * Deploy the AI Agent to Bedrock Agent Core
 
-Below is a 5 min speed run video based on the AWS documentation this quickstart is based on:
+Below is a 5 min speed-run video of the steps taken above. 
+
+> Note: The recording is based on the official AWS documentation
 
 [Bedrock AgentCore QuickStart Demo – 5-Minute Speed Run](https://www.youtube.com/watch?v=VzEfi7prl5o)
 
