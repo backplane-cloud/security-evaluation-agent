@@ -368,18 +368,7 @@ In this quickstart you have learned how to:
 * Deploy the AI Agent to Bedrock Agent Core
 
 
-### Next Steps
-
-* Add tools and actions to your agent
-* Connect external APIs
-* Add memory or state
-* Secure invocation with IAM or network controls
 
 
-
-### Final Thoughts
-
-AgentCore provides a **clean, production-ready runtime** for Agentic AI on AWS.
-Once you understand the deployment model and dependency constraints, it becomes a powerful foundation for real-world AI systems.
 
 
