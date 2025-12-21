@@ -36,13 +36,13 @@ Here is what we'll be doing:
 |--|--|
 | [Python 3.10+](https://www.python.org/downloads/) | We will develop the AI Agent with Python | 
 | AWS Account | We will host our Agent in AWS' Bedrock Agent Core | 
-| Bedrock Agentcore start Toolkist | This will help us package our AI Agent as a container and deploy to AgentCore Runtime|
+| Bedrock Agentcore Starter Toolkit | This will help us package our AI Agent as a container and deploy to AgentCore Runtime|
 | Strands (agent framework) | We'll use Strands Framework to build our Agent |
 | Docker (required on Apple Silicon) | For local testing |
 | Code Editor | VSCode or AWS' Kiro or code editor of choice|
 
 
-> Important Note - If using Apple Silicon (M1 / M2 / M3) The `strands` Python package does not provide ARM64 wheels and AgentCore Direct Code Deploy disables source builds which results in AgentCore's Start Kit 'Direct Deploy' method timing out. We will therefore use the Container Deployment (Docker) method. 
+> Important Note - If using Apple Silicon (M1 / M2 / M3) The `strands` Python package does not provide ARM64 wheels and AgentCore Direct Code Deploy disables source builds which results in AgentCore's Starter Kit 'Direct Deploy' method timing out. We will therefore use the Container Deployment (Docker) method. 
 
 ## Architecture
 
@@ -369,7 +369,7 @@ In this quickstart you have learned how to:
 
 Below is a 5 min speed run video based on the AWS documentation this quickstart is based on:
 
-https://www.youtube.com/watch?v=VzEfi7prl5o
+[Bedrock AgentCore QuickStart Demo – 5-Minute Speed Run](https://www.youtube.com/watch?v=VzEfi7prl5o)
 
 
 
